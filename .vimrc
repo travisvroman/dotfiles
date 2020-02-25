@@ -1,1 +1,0 @@
-/home/travis/.config/nvim/init.vim
