@@ -13,10 +13,19 @@ Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'morhetz/gruvbox'
 
+" Airline theme
+Plug 'vim-airline/vim-airline'
+
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+
 " Initialize plugin system
 call plug#end()
 set bg=dark
 colorscheme gruvbox
+
+" Add powerline symbols automatically.
+let g:airline_powerline_fonts = 1
+
 
 " hybrid line number
 set number relativenumber
@@ -85,6 +94,9 @@ set updatetime=300
 
 " don't give |ins-completion-menu| messages.
 set shortmess+=c
+
+" Default autocomplete for c:
+let g:ycm_global_ycm_extra_conf = "~/dotfiles/.ycm_extra_conf.py"
 
 " Filetype detection
 augroup project
